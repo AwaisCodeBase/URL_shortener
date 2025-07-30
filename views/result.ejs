@@ -2,10 +2,64 @@
 <html>
 <head>
   <title>Shortened URL</title>
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      min-width: 320px;
+    }
+    h1 {
+      color: #24292f;
+      margin-bottom: 16px;
+    }
+    .short-url {
+      font-size: 1.2rem;
+      color: #0366d6;
+      background: #f1f8ff;
+      padding: 10px 18px;
+      border-radius: 6px;
+      word-break: break-all;
+      margin-bottom: 12px;
+    }
+    a.button {
+      background: #2ea44f;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background 0.2s;
+      display: inline-block;
+      margin-top: 8px;
+    }
+    a.button:hover {
+      background: #22863a;
+    }
+  </style>
 </head>
 <body>
-  <h2>Original URL: <%= fullUrl %></h2>
-  <h2>Short URL: <a href="<%= shortUrl %>"><%= shortUrl %></a></h2>
-  <a href="/">Shorten another</a>
+  <div class="container">
+    <h1>Your Shortened URL</h1>
+    <div class="short-url">
+      <a href="<%= shortUrl %>" target="_blank"><%= shortUrl %></a>
+    </div>
+    <a class="button" href="/">Shorten another URL</a>
+  </div>
 </body>
 </html>

@@ -2,6 +2,56 @@
 <html>
 <head>
   <title>URL Shortener</title>
+  <style>
+    body {
+      background: #f6f8fa;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      color: #24292f;
+      margin-bottom: 24px;
+    }
+    form {
+      background: #fff;
+      padding: 32px 24px;
+      border-radius: 12px;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 320px;
+    }
+    input[type="url"] {
+      padding: 12px;
+      border: 1px solid #d1d5da;
+      border-radius: 6px;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    input[type="url"]:focus {
+      border-color: #0366d6;
+    }
+    button {
+      background: #2ea44f;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #22863a;
+    }
+  </style>
 </head>
 <body>
   <h1>Shorten your URL</h1>
